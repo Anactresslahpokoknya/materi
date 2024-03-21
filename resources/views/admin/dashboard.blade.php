@@ -79,7 +79,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-            <h4>Users</h4>
+            <h4>Data Buku</h4>
             <p>1 Million</p> 
           </div>
         </div>

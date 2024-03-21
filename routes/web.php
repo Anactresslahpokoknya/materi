@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\admin;
+use App\Http\Controllers\edit;
+use App\Http\Controllers\pengguna;
 use App\Http\Controllers\tampil;
 use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +41,23 @@ Route::get('registrasi/buku  ',[admin::class,'cc']);
 Route::post('simpan/registrasi/buku', [admin::class, 'simpanbuku']);
 //tampil data admin
 Route::get('tampil/data/admin ',[tampil::class,'dataadmin']);
-
-
-
+//edit buku
+Route::get('buku/edit/{BukuID}',[edit::class,'edit']);
+//tampilan pengguna
+Route::get('tampilan/pengguna', [pengguna::class, 'tampilan']);
+//login pengguna
+Route::get('login/pengguna', [pengguna::class, 'login']);
+//logika login
+Route::post('logikaa',[pengguna::class,'logika']);
+//daftar pengguna
+Route::get('daftar/pengguna', [pengguna::class, 'daftar']);
+//logika daftar pengguna
+Route::post('logikaaa',[pengguna::class,'logikaa']);
+//dashboard pengguna
+Route::get('dashboard/pengguna', [pengguna::class, 'dashboard']);
+//profil pengguna
+Route::get('profil/pengguna', [pengguna::class, 'tampilprofil']);
+//validasi
+Route::get('validasi', [pengguna::class, 'validasi']);
+//ganti status
+Route::get('StatusPeminjaman/{PeminjamanID}', [pengguna::class, 'cekValidasi']);
